@@ -1,28 +1,44 @@
-
+from concessionaire import vehicles
 class Vehicle:
-    def __init__(self, make, model, year):
+    def __init__(self,id_vehicle,  make, model, year):
+        self.id_vehicle = id_vehicle
         self.make = make
         self.model = model
         self.year = year
-        self.avalible = True
+        self.available = True
         
+        
+    def add_vehicle(self, vehicle):
+        if vehicle in vehicles:
+            print(" is olready existe")
+        else:
+            vehicles.append(vehicle)
+            print("added Vehicle")
+            
+    def delete_vehicle(self, vehicle):
+        if vehicle in vehicles:
+            vehicles.remove(vehicle)
+            print("Vehicle deleted")
+        else:
+            print("Vehicle not found")
+            
+    def update_vehicle(self, vehicle):
+        if vehicle in vehicles:
+            for item in vehicles: 
+                ite      
     
        
         
-    def vehicle_disponible(self):
-        make = input("Ingrese la marca")
-        model = input("ingrese el modelo")
-        Year = input("ingrese el año")
-        self.vehicle_inventory.append(Vehicle(make, model, Year))
+    def is_available(self):
+        if self.available:
+            return f"{self.year} {self.make} {self.model} is available"
+        else:
+            return f"{self.year} {self.make} {self.model} is not available"
+            
         
-    def sale_vehicle(self):
-        for item in self.vehicle_inventory:
-            if self.avalible:
-                print(f"El vehiculo {item.make} {item.model} {item.year} es tuyo")
-            else:
-                print(f"El vehiculo {item.make} {item.model} {item.year} no esta disponible")
-                
-    def show_vehicle(self):
-        self.vehicle_inventory
-
+    
+            
+            
+        
+        
     
