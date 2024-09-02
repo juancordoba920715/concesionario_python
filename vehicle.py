@@ -8,21 +8,21 @@ class Vehicle:
         self.available = True
         
         
-    def add_vehicle(self, vehicle):
+    def add_vehicle(self, vehicle:Vehicle):
         if vehicle in vehicles:
-            print(" is olready existe")
+            print(" is olready exist")
         else:
             vehicles.append(vehicle)
             print("added Vehicle")
             
-    def delete_vehicle(self, vehicle):
+    def delete_vehicle(self, vehicle: Vehicle):
         if vehicle in vehicles:
             vehicles.remove(vehicle)
             print("Vehicle deleted")
         else:
             print("Vehicle not found")
             
-    def update_vehicle(self, vehicle):
+    def update_vehicle(self, vehicle: Vehicle):
         if vehicle in vehicles:
             for item in vehicles: 
                 ite      
